@@ -5,7 +5,7 @@
             margin: 0px;
             padding: 0px;
         }
-        img{
+        img, button{
             width: 100vw;
         }
         section{
@@ -13,7 +13,6 @@
             flex-direction: column;
         }
         button{
-            width: 100vw;
             background-color: rgb(0, 0, 0);
             padding: 20px;
             border: none;
@@ -29,4 +28,7 @@
             font-weight: bolder;
             font-size: 16px;
             color: white;
+        }
+        .content{
+            background-color: black;
         }
