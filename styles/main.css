@@ -17,14 +17,21 @@ main {
     display: flex;
     height: 100vh;
     width: 100vw;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #phone {
     position: relative;
-    flex: 1; /*ocupa o espaço todo*/
+    width: 298px;
+    margin-left: auto;
+    height: 618px;
+    border-radius: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #000000;
+    box-shadow: 0px 0px 16px 5px rgba(0, 0, 0, 0.37);
 }
 
 #phone img {
@@ -59,6 +66,8 @@ main {
     gap: 20px;
     align-items: center;
     width: 60px;
+    margin-left: auto;
+    
 
 }
 
@@ -68,11 +77,13 @@ main {
     background-size: cover;
     border-radius: 50%;
     margin: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.507);
 
 }
 
 #buttons img:hover {
 
     box-shadow: 0px 0px 10px 3px #318aff;
+    transform: translate(-2px, -2px);
     transition: 0.3s;
 }
