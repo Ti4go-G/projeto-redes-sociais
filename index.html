@@ -12,17 +12,37 @@
     <main>
         <section id="phone">
             <img src="./src/img/frame-iphone.png" alt="">
-            <iframe src="" frameborder="0"></iframe>
+            <iframe src="" name="phone-frame" frameborder="0"></iframe>
         </section>
         <aside id="buttons">
             <a href=""><img src="./src/logo/logo-home.jpg" alt=""></a>
-            <a href=""><img src="./src/logo/logo-instagram.jpg" alt=""></a>
-            <a href=""><img src="./src/logo/logo-facebook.jpg" alt=""></a>
-            <a href=""><img src="./src/logo/logo-youtube.jpg" alt=""></a>
-            <a href=""><img src="./src/logo/logo-github.jpg" alt=""></a>
-            <a href=""><img src="./src/logo/logo-twitter.jpg" alt=""></a>
+            <a href="./insta.html" target="phone-frame"><img src="./src/logo/logo-instagram.jpg" alt=""></a>
+            <a href="./facebook.html" target="phone-frame"><img src="./src/logo/logo-facebook.jpg" alt=""></a>
+            <a href="./youtube.html" target="phone-frame"><img src="./src/logo/logo-youtube.jpg" alt=""></a>
+            <a href="./github.html" target="phone-frame"><img src="./src/logo/logo-github.jpg" alt=""></a>
+            <a href="./twitter.html" target="phone-frame"><img src="./src/logo/logo-twitter.jpg" alt=""></a>
         </aside>
     </main>
+    <script>
+        const links = document.querySelectorAll('aside#buttons a');
+        const iframe = document.querySelector('iframe[name="phone-frame"]');
+        links.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault()
+
+                iframe.classList.add('loading');
+
+                const url = this.getAttribute('href');
+
+                setTimeout(() => {
+                    iframe.src = url;
+                    iframe.classList.remove('loading')
+
+                }, 300);
+            });
+        });
+
+    </script>
 </body>
 
 </html>
